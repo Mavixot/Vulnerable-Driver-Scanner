@@ -1,4 +1,4 @@
-# Driver Scanner
+# Vulnerable Driver Scanner
 
 Driver Scanner uses static analysis to look for potential security issues in Windows kernel drivers. Point it at a folder of `.sys` files to review IOCTL paths, memory operations, signatures, and installed Microsoft deny-hash matches.
 
@@ -16,7 +16,7 @@ Driver Scanner uses static analysis to look for potential security issues in Win
 Use Visual Studio 2022 with **Desktop development with C++** and a Windows SDK installed.
 
 ```powershell
-msbuild .\drvscanner.sln /p:Configuration=Release /p:Platform=x64
+msbuild .\driverscanner.sln /p:Configuration=Release /p:Platform=x64
 ```
 
 The executable is written to `x64\Release\Driver Scanner.exe`. Instruction tracing also needs the Visual Studio C++ tools (`dumpbin.exe`) installed on the machine running the scanner.
