@@ -2,8 +2,6 @@
 
 Driver Scanner uses static analysis to look for potential security issues in Windows kernel drivers. Point it at a folder of `.sys` files to review IOCTL paths, memory operations, signatures, and installed Microsoft deny-hash matches.
 
-The goal is to help decide which drivers deserve a closer look in a disassembler. Importing a sensitive API by itself does not make a driver vulnerable.
-
 ## What it checks
 
 - Recovers supported x64 WDM device-control handlers and traces request-derived values through their code paths.
@@ -16,8 +14,6 @@ The goal is to help decide which drivers deserve a closer look in a disassembler
 ## Build
 
 Use Visual Studio 2022 with **Desktop development with C++** and a Windows SDK installed.
-
-Open `drvscanner.sln`, select **Release / x64**, and build. From a Visual Studio Developer PowerShell, the equivalent command is:
 
 ```powershell
 msbuild .\drvscanner.sln /p:Configuration=Release /p:Platform=x64
